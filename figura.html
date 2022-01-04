@@ -4,12 +4,153 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root{
+            --white: #ffffff;
+            --black: #000000;
+            --very-light-pinki: #c7c7c7;
+            --text-input-field: #f7f7f7;
+            --hospital-green: #acd9B2;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+        }
+        body{
+            margin:0;
+            font-family:'Quicksand', sans-serif;
+        }
+        .header{
+            background: var(--very-light-pinki);
+            height: 200px;
+            text-align: center;
+            vertical-align: middle;
+        }
+        .form-container{
+            display: grid;
+            grid-template-columns:repeat(4,1fr);
+            width: 700px;
+            
+        }
+        .form{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .input{
+            background-color: var(--text-input-field);
+            border: none;
+            border-radius: 8px;
+            height: 30px;
+            font-size: var(--md);
+            padding: 6px;
+            margin-bottom: 12px;
+        }
+        .label{
+            font-size: var(--sm);
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+        .primary-button{
+            background-color: var(--hospital-green);
+            border-radius: 8px;
+            border: 0;
+            color: var(--white);
+            width: 100%;
+            cursor: pointer;
+            font-size: var(--md);
+            font-weight: bold;
+            height: 50px;
+            margin: 2px;
+        }
+    </style>
     <title>Figuras Geometricas</title>
 
 </head>
 <body>
-    <h1>Figura Geometricas</h1>
+    <header class="header">
+      <h1>Figura Geometricas</h1>
+      <p>Este el primer taller del curso practico</p>  
+    </header>   
+    <section class="form-container">
+        <div class="tarjetas">   
+            <h2>Calcular el area y perimetro de un cuadrado</h2>
+            <form action="/" class="form">
+                <label class="label" for="InputCuadrado">
+                    Escribe cuanto mide cada lado de tu cuadrado
+                </label>
+                <input  class="input "id="InputCuadrado" type="number">            
+                <button class="primary-button" type="button" onclick="calcularPerimetroCuadrado()">
+                    Calcular el Perimetro
+                </button>
+                <button class="primary-button"type="button" onclick="calcularAreaCuadrado()">
+                    Calcular el area
+                </button>
+            </form>
+        </div>      
+        <div class="tarjetas">   
+            <h2>Calcular la altura de un triangulo</h2>
+            <form action="/" class="form">
+                <label class="label" for="Triangulo_InputLado">
+                    Escribe cuanto mide un lado de tu triangulo
+                </label>
+                <input  class="input "id="Triangulo_InputLado" type="number">
+                
+                <label class="label" for="Triangulo_InputBase">
+                    Escribe cuanto mide la base del triangulo
+                </label>
+                <input  class="input "id="Triangulo_InputBase" type="number">            
+                <button class="primary-button" type="button" onclick="CalcularAlturaIsoceles()">
+                    Calcular la Altura del Triangulo
+                </button>
+            </form>
+        </div>
+        <div class="tarjetas">   
+            <h2>Calcular el diametro, perimetro y area  de un circulo</h2>
+            <form action="/" class="form">
+                <label class="label" for="InputCuadrado">
+                    Escribe cuanto mide el radio del circulo
+                </label>
+                <input  class="input "id="InputCuadrado" type="number">            
+                <button class="primary-button"type="button" onclick="CalcularDiametroCirculo()">
+                    Calcular el diametro
+                </button>
+                <button class="primary-button" type="button" onclick="CalcularPerimetroCirculo()">
+                    Calcular el Perimetro
+                </button>
+                <button class="primary-button"type="button" onclick="CalcularAreaCirculo()">
+                    Calcular el area
+                </button>  
+            </form>
+        </div>
+        <div class="tarjetas">   
+            <h2>Calcular el perimetro y area  de un Triangulo</h2>
+            <form action="/" class="form">
+                <label class="label" for="Triangulo_InputLado1">
+                    Escribe cuanto mide el primer lado del Triangulo
+                </label>
+                <input  class="input "id="Triangulo_InputLado1" type="number">            
+                <label class="label" for="Triangulo_InputLado2">
+                    Escribe cuanto mide el segundo lado del Triangulo
+                </label>
+                <input  class="input "id="Triangulo_InputLado2" type="number"> 
+                <label class="label" for="Triangulo_InputBase1">
+                    Escribe cuanto mide la base del Triangulo
+                </label>
+                <input  class="input "id="Triangulo_InputBase1" type="number"> 
+                <button class="primary-button"type="button" onclick="CalcularPerimetroTriangulo()">
+                    Calcular el Perimetro
+                </button>
+                <button class="primary-button" type="button" onclick="CalcularAreaTriangulo()">
+                    Calcular el Area
+                </button>
+                </button>  
+            </form>
+        </div>
+    </section>
+    
     <script src="./figura.js"></script>
 </body>
 </html>
