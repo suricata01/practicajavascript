@@ -15,3 +15,8 @@ Este es mi proyecto con ayuda de platzi del curso de practico con Javascript
 - Segundo Paso: Implementar la formula en Javascript
 - Tercer Paso: Crear funciones
 - Cuarto Paso: Integrar JS con HTML
+## Taller #4: Salarios
+-  Primer paso: Definir las formulas 
+- Segundo Paso: Implementar la formula en Javascript
+- Tercer Paso: Crear funciones
+- Cuarto Paso: Integrar JS con HTML
